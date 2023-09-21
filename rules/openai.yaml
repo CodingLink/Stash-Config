@@ -1,0 +1,7 @@
+payload:
+ # Main domain
+ - DOMAIN-SUFFIX,ai.com
+ - DOMAIN-SUFFIX,openai.com
+ # CDN
+ - DOMAIN,chat.openai.com.cdn.cloudflare.net
+ - DOMAIN,openaiapi-site.azureedge.net
