@@ -1,0 +1,10 @@
+name: UDP分流控制
+desc: 控制国内udp直连，reject国外udp
+
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+    udp-cn: network == 'udp' and geoip(dst_ip if dst_ip != '' else resolve_ip(host)) == 'CN'
+rules:
+  - SCRIPT,udp-cn,DIRECT
+  - SCRIPT,quic,REJECT
