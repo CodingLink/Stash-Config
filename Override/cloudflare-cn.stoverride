@@ -4,6 +4,8 @@ desc: 将 cloudflare-cn.com 重定向到 cloudflare.com
 http:
   force-http-engine:
     - "cloudflare-cn.com"
+  mitm:
+    - "cloudflare-cn.com"
 
   rewrite:
     - ^https?:\/\/(www.)?(cloudflare-cn)\.com https://www.cloudflare.com 302
